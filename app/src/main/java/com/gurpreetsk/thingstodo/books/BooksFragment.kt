@@ -48,6 +48,8 @@ class BooksFragment : Fragment() {
           database.booksQueries
               .insertOne(bookNameEditText.text.toString(), bookAuthorEditText.text.toString(), 0L, Date().time)
               .also {
+                bookNameEditText.setText(String.empty())
+                bookAuthorEditText.setText(String.empty())
                 dialog.dismiss()
               }
         }
@@ -98,3 +100,5 @@ class BooksFragment : Fragment() {
     }
   }
 }
+
+fun String.Companion.empty(): String = ""

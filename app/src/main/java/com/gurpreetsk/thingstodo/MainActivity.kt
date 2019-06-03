@@ -8,6 +8,8 @@ import com.gurpreetsk.thingstodo.audios.AudiosFragment
 import com.gurpreetsk.thingstodo.audios.TAG_AUDIOS_FRAGMENT
 import com.gurpreetsk.thingstodo.books.BooksFragment
 import com.gurpreetsk.thingstodo.books.TAG_BOOKS_FRAGMENT
+import com.gurpreetsk.thingstodo.likings.LikingsFragment
+import com.gurpreetsk.thingstodo.likings.TAG_LIKINGS_FRAGMENT
 import com.gurpreetsk.thingstodo.movies.MoviesFragment
 import com.gurpreetsk.thingstodo.movies.TAG_MOVIES_FRAGMENT
 import kotlinx.android.synthetic.main.main_activity.bottomNavigationView
@@ -56,8 +58,8 @@ class MainActivity : AppCompatActivity() {
       ItemType.MOVIES   -> MoviesFragment.newInstance() to TAG_MOVIES_FRAGMENT
       ItemType.AUDIOS   -> AudiosFragment.newInstance() to TAG_AUDIOS_FRAGMENT
       ItemType.BOOKS    -> BooksFragment.newInstance() to TAG_BOOKS_FRAGMENT
+      ItemType.LIKINGS  -> LikingsFragment.newInstance() to TAG_LIKINGS_FRAGMENT
       // FIXME
-      ItemType.LIKINGS  -> MoviesFragment.newInstance() to TAG_MOVIES_FRAGMENT
       ItemType.MISC     -> MoviesFragment.newInstance() to TAG_MOVIES_FRAGMENT
     }
   }

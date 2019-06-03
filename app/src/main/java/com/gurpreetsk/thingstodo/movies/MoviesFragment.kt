@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gurpreetsk.thingstodo.Injection
 import com.gurpreetsk.thingstodo.R
+import com.gurpreetsk.thingstodo.books.empty
 import com.squareup.sqldelight.Query
 import kotlinx.android.synthetic.main.movies_fragment.addMovieButton
 import kotlinx.android.synthetic.main.movies_fragment.moviesRecyclerView
@@ -47,6 +48,7 @@ class MoviesFragment : Fragment() {
           database.movieQueries
               .insertOne(nameEditText.text.toString(), 0L, Date().time)
               .also {
+                nameEditText.setText(String.empty())
                 dialog.dismiss()
               }
         }

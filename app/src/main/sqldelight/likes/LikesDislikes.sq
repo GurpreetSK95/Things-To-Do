@@ -1,0 +1,13 @@
+CREATE TABLE likesDislikes (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  liked INTEGER NOT NULL,
+  disliked INTEGER NOT NULL,
+  timestamp INTEGER NOT NULL
+);
+
+selectAll:
+SELECT * FROM likesDislikes ORDER BY timestamp ASC;
+
+insertOne:
+INSERT INTO likesDislikes (name, liked, disliked, timestamp) VALUES (?, ?, ?, ?);
