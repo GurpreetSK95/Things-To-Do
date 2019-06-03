@@ -14,8 +14,8 @@ import com.gurpreetsk.thingstodo.Injection
 import com.gurpreetsk.thingstodo.R
 import com.gurpreetsk.thingstodo.books.empty
 import com.squareup.sqldelight.Query
+import kotlinx.android.synthetic.main.likings_fragment.addLikingButton
 import kotlinx.android.synthetic.main.likings_fragment.likingsRecyclerView
-import kotlinx.android.synthetic.main.movies_fragment.addMovieButton
 import java.util.Date
 
 const val TAG_LIKINGS_FRAGMENT = "TAG_LIKINGS_FRAGMENT"
@@ -81,7 +81,7 @@ class LikingsFragment : Fragment() {
     likingsRecyclerView.layoutManager = LinearLayoutManager(context)
     likingsRecyclerView.adapter = likingsAdapter
 
-    addMovieButton.setOnClickListener { addLikingsDialog.show() }
+    addLikingButton.setOnClickListener { addLikingsDialog.show() }
   }
 
   override fun onStart() {
