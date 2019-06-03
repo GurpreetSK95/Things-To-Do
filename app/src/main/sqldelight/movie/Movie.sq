@@ -1,0 +1,12 @@
+CREATE TABLE movie (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  isWatched INTEGER NOT NULL,
+  timestamp INTEGER NOT NULL
+);
+
+selectAll:
+SELECT * FROM movie ORDER BY timestamp ASC;
+
+insertOne:
+INSERT INTO movie (name, isWatched, timestamp) VALUES (?, ?, ?);

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/nameEditText"
+  android:layout_height="wrap_content"
+  android:layout_width="match_parent"
+  android:layout_margin="16dp"
+  android:hint="@string/add_name"
+  android:maxLength="200"
+  android:maxLines="2"
+  android:backgroundTint="@color/transparent"
+  />
