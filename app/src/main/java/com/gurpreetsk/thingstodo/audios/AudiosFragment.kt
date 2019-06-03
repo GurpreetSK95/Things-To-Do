@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -94,7 +95,7 @@ class AudiosFragment : Fragment() {
 
     audiosAdapter.submitList(audios)
     if (audios.isEmpty()) {
-      Snackbar.make(audiosRootView, "No audios available", Snackbar.LENGTH_LONG).show()
+      Toast.makeText(context, "No audios available", Toast.LENGTH_LONG).show()
     }
   }
 }

@@ -5,16 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import com.gurpreetsk.thingstodo.Injection
 import com.gurpreetsk.thingstodo.R
 import com.squareup.sqldelight.Query
 import kotlinx.android.synthetic.main.movies_fragment.addMovieButton
-import kotlinx.android.synthetic.main.movies_fragment.moviesRootView
-import kotlinx.android.synthetic.main.movies_fragment.pendingMoviesRecyclerView
+import kotlinx.android.synthetic.main.movies_fragment.moviesRecyclerView
 import java.util.Date
 
 const val TAG_MOVIES_FRAGMENT = "TAG_MOVIES_FRAGMENT"
@@ -71,8 +70,8 @@ class MoviesFragment : Fragment() {
   }
 
   private fun setupUi() {
-    pendingMoviesRecyclerView.layoutManager = LinearLayoutManager(context)
-    pendingMoviesRecyclerView.adapter = moviesAdapter
+    moviesRecyclerView.layoutManager = LinearLayoutManager(context)
+    moviesRecyclerView.adapter = moviesAdapter
 
     addMovieButton.setOnClickListener { addMovieDialog.show() }
   }
@@ -94,7 +93,7 @@ class MoviesFragment : Fragment() {
 
     moviesAdapter.submitList(movies)
     if (movies.isEmpty()) {
-      Snackbar.make(moviesRootView, "No movies available", Snackbar.LENGTH_LONG).show()
+      Toast.makeText(context, "No movies available", Toast.LENGTH_LONG).show()
     }
   }
 }
