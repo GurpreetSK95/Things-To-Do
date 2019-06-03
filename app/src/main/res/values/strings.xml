@@ -10,4 +10,6 @@
   <string name="add_movie">Add Movie</string>
   <string name="cancel">Cancel</string>
   <string name="add_audio">Add Audio</string>
+  <string name="add_book">Add Book</string>
+  <string name="author_name">Author name</string>
 </resources>

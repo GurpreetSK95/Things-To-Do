@@ -1,0 +1,13 @@
+CREATE TABLE book (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  author TEXT NOT NULL,
+  isRead INTEGER NOT NULL,
+  timestamp INTEGER NOT NULL
+);
+
+selectAll:
+SELECT * FROM book ORDER BY timestamp ASC;
+
+insertOne:
+INSERT INTO book (name, author, isRead, timestamp) VALUES (?, ?, ?, ?);
